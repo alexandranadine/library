@@ -1,0 +1,67 @@
+$seafoam: #a5eed6;
+$pink: pink;
+$offwhite: #fdeeda;
+$shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+
+html,
+body {
+  height: 100%;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 1fr 8fr;
+  grid-template-areas:
+    "header header header header sidebar"
+    "main main main main sidebar";
+  height: 100%;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: $seafoam;
+  grid-area: sidebar;
+
+  h1 {
+    margin: 0;
+  }
+}
+
+.header {
+  background-color: $pink;
+  grid-area: header;
+}
+
+.main {
+  background-color: $offwhite;
+  grid-area: main;
+}
+
+.footer {
+  text-align: center;
+}
+
+.sidebar,
+.header,
+.main {
+  padding: 2rem;
+}
+
+.book-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  align-items: center;
+  justify-items: center;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 1rem;
+  width: 300px;
+  height: 250px;
+  box-shadow: $shadow;
+  border-top: 25px solid $pink;
+}
