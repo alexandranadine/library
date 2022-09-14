@@ -12,7 +12,7 @@ body {
   font-family: raleway, sans-serif;
   font-weight: 500;
   font-style: normal;
-  color: #333333;
+  color: #3b3b3b;
 }
 
 .container {
@@ -132,6 +132,14 @@ body {
     border: none;
     border-radius: 0.5rem;
     margin: 0.3rem;
+  }
+}
+
+.no-books {
+  text-align: center;
+  h2, h3 {
+    margin: 0;
+    line-height: 1.5;
   }
 }
 

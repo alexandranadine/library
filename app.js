@@ -69,7 +69,7 @@ function createBookCard(book) {
 
     removeButton.addEventListener("click", () => {
       bookGrid.removeChild(card);
-      removeBook();
+      removeBook(book);
     });
 
   card.appendChild(title);
@@ -80,9 +80,14 @@ function createBookCard(book) {
   buttonContainer.appendChild(removeButton);
   bookGrid.appendChild(card);
 
+  // if(bookGrid.childNodes.length === 0) {
+  //   bookGrid.innerHTML = "<h2>WHATSUOP</h2>"
+  // }
+
 }
 
-function removeBook(index) {
+function removeBook(item) {
+  const index = myLibrary.books.indexOf(item);
   myLibrary.books.splice(index, 1);
   updateBooks();
 }
