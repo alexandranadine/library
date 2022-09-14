@@ -35,17 +35,42 @@ function createBookCard(book) {
   removeButton.classList.add("remove-button");
 
   title.textContent = `"${book.title}"`;
-  author.textContent = book.author;
+  author.textContent = `by ${book.author}`;
   pages.textContent = `${book.pages} pages`;
   removeButton.textContent = "Remove Book";
 
   if (book.isRead) {
     readButton.classList.add("button-read");
     readButton.textContent = "READ IT";
+    readButton.addEventListener("click", () => {
+      readButton.classList.toggle("button-unread");
+      if (readButton.textContent === "READ IT") {
+        readButton.textContent = "DIDN'T READ IT!";
+        return (book.isRead = false);
+      } else {
+        readButton.textContent = "READ IT";
+        return (book.isRead = true);
+      }
+    });
   } else {
     readButton.classList.add("button-unread");
     readButton.textContent = "DIDN'T READ IT!";
-  }
+    readButton.addEventListener("click", () => {
+      readButton.classList.add("button-read");
+      readButton.classList.toggle("button-unread");
+      if (readButton.textContent === "DIDN'T READ IT!") {
+        readButton.textContent = "READ IT";
+        return (book.isRead = true);
+      } else {
+        readButton.textContent = "DIDN'T READ IT!";
+        return (book.isRead = false);
+      }
+    });}
+
+    removeButton.addEventListener("click", () => {
+      bookGrid.removeChild(card);
+      removeBook();
+    });
 
   card.appendChild(title);
   card.appendChild(author);
@@ -54,6 +79,12 @@ function createBookCard(book) {
   buttonContainer.appendChild(readButton);
   buttonContainer.appendChild(removeButton);
   bookGrid.appendChild(card);
+
+}
+
+function removeBook(index) {
+  myLibrary.books.splice(index, 1);
+  updateBooks();
 }
 
 function bookFromInput() {
@@ -87,3 +118,6 @@ function addBook(event) {
 // Selects the "+" button, calls reference of above function
 const addBookSubmit = document.querySelector("#submit");
 addBookSubmit.onclick = addBook;
+
+// const deleteBookCard = document.querySelector(".remove-button");
+// deleteBookCard.addEventListener("click", () => removeBook());
