@@ -79,11 +79,6 @@ function createBookCard(book) {
   buttonContainer.appendChild(readButton);
   buttonContainer.appendChild(removeButton);
   bookGrid.appendChild(card);
-
-  // if(bookGrid.childNodes.length === 0) {
-  //   bookGrid.innerHTML = "<h2>WHATSUOP</h2>"
-  // }
-
 }
 
 function removeBook(item) {
@@ -123,6 +118,3 @@ function addBook(event) {
 // Selects the "+" button, calls reference of above function
 const addBookSubmit = document.querySelector("#submit");
 addBookSubmit.onclick = addBook;
-
-// const deleteBookCard = document.querySelector(".remove-button");
-// deleteBookCard.addEventListener("click", () => removeBook());
