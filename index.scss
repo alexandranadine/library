@@ -1,3 +1,6 @@
+
+// --------------------------------- GLOBAL --------------------------------- //
+
 $rust: #e29578;
 $beige: #ffddd2;
 $tiffany: #83c5be;
@@ -25,6 +28,14 @@ body {
     "header header header sidebar"
     "main main main sidebar";
 }
+
+.sidebar,
+.header,
+.main {
+  padding: 2rem;
+}
+
+// --------------------------------- SIDEBAR --------------------------------- //
 
 .sidebar {
   display: flex;
@@ -69,6 +80,12 @@ body {
   }
 }
 
+.footer {
+  text-align: center;
+}
+
+// --------------------------------- HEADER --------------------------------- //
+
 .header {
   background-color: $offwhite;
   grid-area: header;
@@ -89,19 +106,24 @@ body {
   }
 }
 
+// --------------------------------- MAIN --------------------------------- //
+
 .main {
   background-color: $offwhite;
   grid-area: main;
 }
 
-.footer {
+.no-books {
+  color: #7e7e7e;
   text-align: center;
-}
+  margin: 0 auto;
+  height: 100%;
 
-.sidebar,
-.header,
-.main {
-  padding: 2rem;
+  h2,
+  h3 {
+    margin: 0;
+    line-height: 1.5;
+  }
 }
 
 .book-cards {
@@ -135,19 +157,6 @@ body {
     border-radius: 0.5rem;
     margin: 0.3rem;
     transition: 300ms ease;
-  }
-}
-
-.no-books {
-  color: #7e7e7e;
-  text-align: center;
-  margin: 0 auto;
-  height: 100%;
-
-  h2,
-  h3 {
-    margin: 0;
-    line-height: 1.5;
   }
 }
 
