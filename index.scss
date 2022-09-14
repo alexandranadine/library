@@ -1,4 +1,3 @@
-
 // --------------------------------- GLOBAL --------------------------------- //
 
 $rust: #e29578;
@@ -18,6 +17,18 @@ body {
   font-weight: 500;
   font-style: normal;
   color: #3b3b3b;
+}
+
+a {
+  color: $teal;
+  transition: 300ms ease;
+
+  &:hover {
+    color: $tiffany;
+  }
+  &:visited {
+    color: $rust;
+  }
 }
 
 .container {

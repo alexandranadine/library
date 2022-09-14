@@ -10,6 +10,17 @@ body {
   color: #3b3b3b;
 }
 
+a {
+  color: #006d77;
+  transition: 300ms ease;
+}
+a:hover {
+  color: #83c5be;
+}
+a:visited {
+  color: #e29578;
+}
+
 .container {
   display: grid;
   grid-template-rows: 1fr 8fr;
