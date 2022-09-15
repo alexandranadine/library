@@ -65,12 +65,13 @@ function createBookCard(book) {
         readButton.textContent = "DIDN'T READ IT!";
         return (book.isRead = false);
       }
-    });}
-
-    removeButton.addEventListener("click", () => {
-      bookGrid.removeChild(card);
-      removeBook(book);
     });
+  }
+
+  removeButton.addEventListener("click", () => {
+    bookGrid.removeChild(card);
+    removeBook(book);
+  });
 
   card.appendChild(title);
   card.appendChild(author);

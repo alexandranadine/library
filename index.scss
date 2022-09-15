@@ -46,6 +46,45 @@ a {
   padding: 2rem;
 }
 
+// --------------------------------- HEADER --------------------------------- //
+
+.header {
+  background-color: $offwhite;
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: $shadow;
+  z-index: 2;
+}
+
+.header-title {
+  display: flex;
+  align-items: center;
+
+  i {
+    font-size: 2rem;
+    margin-left: 1rem;
+    color: $teal;
+  }
+}
+
+.login {
+  button {
+    border: none;
+    padding: 0.8rem 2rem;
+    background-color: $tiffany;
+    border-radius: 1.5rem;
+    font-weight: 600;
+    transition: 300ms ease;
+
+    &:hover {
+      background-color: $teal;
+      color: $offwhite;
+    }
+  }
+}
+
 // --------------------------------- SIDEBAR --------------------------------- //
 
 .sidebar {
@@ -93,28 +132,6 @@ a {
 
 .footer {
   text-align: center;
-}
-
-// --------------------------------- HEADER --------------------------------- //
-
-.header {
-  background-color: $offwhite;
-  grid-area: header;
-  display: flex;
-  align-items: center;
-  box-shadow: $shadow;
-  z-index: 2;
-}
-
-.header-title {
-  display: flex;
-  align-items: center;
-
-  i {
-    font-size: 2rem;
-    margin-left: 1rem;
-    color: $teal;
-  }
 }
 
 // --------------------------------- MAIN --------------------------------- //
